@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>News Outlet | Hopes Project</title> 
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body></body>
+  <body>
+    <!-- Our product has two dropdown buttons. 
+      one for category selection and one for country selection. 
+      The Category dropdown selects a broad news topic like tech or business. 
+      while the country simply selects the country. 
+      Then with that information, you click search and you will get a 
+      random news excerpt from the selected category in the selected country -->
+<!--Form may need a action-->
+  <form>
+    <label class="selection" for="countries">Select a country</label>
+    <select name="countries" id="countries">
+      <option value="austrialia">Austrialia</option>
+      <option value="brazil">Brazil</option>
+      <option value="china">China</option>
+      <option value="usa">USA</option>
+      <br>
+    </select>
+    <input type="submit" value="Search">
+  </form>
+
+  
+
+
+
+  </body>
 </html>
