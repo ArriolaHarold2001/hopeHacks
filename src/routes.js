@@ -1,18 +1,21 @@
 const router = require("express").Router();
-const request = require("request");
+const NewsApi = require("newsapi");
 
-const apiKey = "9d662556d4944aaaa71c567219994789";
-const url = `https://newsapi.org/v2/everything?q=Apple&from=2022-02-14&sortBy=popularity&apiKey=${apiKey}`;
-let reqs;
+const newsApi = new NewsApi("9d662556d4944aaaa71c567219994789");
 
 router.get("/", (req, res) => {
-  request(url, (err, res, body) => {
-    if (err) {
-      return;
-    }
-    reqs = body;
-  });
-  res.status(200).send(reqs);
+  newsApi.v2
+    .topHeadlines({
+      language: "en",
+    })
+    .then((response) => {
+      // console.log(response.articles);
+      // const obj = JSON.stringify(response.articles);
+
+      res.render("index", {
+        response: response.articles,
+      });
+    });
 });
 
 module.exports = router;
