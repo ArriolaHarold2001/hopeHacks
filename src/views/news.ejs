@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>Document</title>
+=======
+    
+    <title>News API</title>
+>>>>>>> c3b2a89e8d6030022bc2b4e9530cbc2edf195b41
   </head>
   <body>
     <% for(let i = 0; i < response.length ; i++){ %>
@@ -12,6 +17,12 @@
     <h1>Author: <%= response[i].author %></h1>
     <h2>Title: <%= response[i].title %></h2>
     <h2>Description: <%= response[i].description %></h2>
+<<<<<<< HEAD
+=======
+    <p>URL: <%= response[i].url %></p>
+    <p>Published At: <%= response[i].publishedAt %></p>
+    <p>Content: <%= response[i].content %></p>
+>>>>>>> c3b2a89e8d6030022bc2b4e9530cbc2edf195b41
     <img src="<%= response[i].urlToImage %>" />
     <br />
     <%}%>
