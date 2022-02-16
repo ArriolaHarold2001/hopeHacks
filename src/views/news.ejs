@@ -4,20 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="stylesheet" href="style.css" />
     <title>News API</title>
+    <style>
+      .news-body {
+        background-color: red;
+      }
+    </style>
   </head>
-  <body>
-    <% for(let i = 0; i < response.length ; i++){ %>
-    <!-- <h1><%= response %></h1> -->
-    <h1>Author: <%= response[i].author %></h1>
-    <h2>Title: <%= response[i].title %></h2>
-    <h2>Description: <%= response[i].description %></h2>
-    <p>URL: <%= response[i].url %></p>
-    <p>Published At: <%= response[i].publishedAt %></p>
-    <p>Content: <%= response[i].content %></p>
-    <img src="<%= response[i].urlToImage %>" />
-    <br />
-    <%}%>
+  <body class="news-body">
+    <main class="news-main">
+      <a href="https://www.pexels.com">Background Image provided by Pexels</a>
+      <div class="res-title">
+        <h1>Title: <%= response[artPointer].title %></h1>
+      </div>
+      <div class="res-author">
+        <h2>Author: <%= response[artPointer].author %></h2>
+      </div>
+      <div class="res-publishedAt">
+        <h3>Published At: <%= response[artPointer].publishedAt %></h3>
+      </div>
+      <div class="res-description">
+        <p>Description: <%= response[artPointer].description %></p>
+      </div>
+      <div class="res-image">
+        <img src="<%= response[artPointer].urlToImage %>" />
+      </div>
+      <div class="res-content">
+        <p>Content: <%= response[artPointer].content %></p>
+      </div>
+      <div class="res-url">
+        <p>URL: <%= response[artPointer].url %></p>
+      </div>
+    </main>
   </body>
 </html>

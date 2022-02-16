@@ -14,11 +14,12 @@ router.get("/news", (req, res) => {
       category: "business",
     })
     .then((response) => {
-      // console.log(response);
-      // const obj = JSON.stringify(response.articles);
+      const artPointer = Math.floor(Math.random() * response.articles.length);
+      // console.log(artPointer);
 
       res.render("news", {
         response: response.articles,
+        artPointer: artPointer,
       });
     });
 });
