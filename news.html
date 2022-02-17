@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>News API</title>
+    <style>
+      .news-body {
+        background-color: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body class="news-body">
+    <main class="news-main">
+      <div class="res-title">
+        <h1></h1>
+      </div>
+
+      <div class="res-publishedAt">
+        <h3>
+          Published At:
+          <a href="<%= data.publishedAt "> data.source </a>
+        </h3>
+      </div>
+
+      <div class="res-author">
+        <h2>Author: data.author</h2>
+      </div>
+
+      <div class="res-description">
+        <p>Description: data.description</p>
+      </div>
+
+      <div class="res-image">
+        <img src=" data.urlToImage " />
+      </div>
+
+      <div class="res-content">
+        <p>Content: data.content</p>
+      </div>
+
+      <div class="res-url">
+        <p>URL: data.url</p>
+      </div>
+    </main>
+  </body>
+</html>
