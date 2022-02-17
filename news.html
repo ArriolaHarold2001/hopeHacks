@@ -8,6 +8,7 @@
     <title>News Outlet | News API</title>
   </head>
   <body>
+    <!--Main Menu-->
     <header>
       <nav class="mainMenu">
       <h2 class="logo">News Outlet</h2>
@@ -18,9 +19,10 @@
       </ul>
       </nav>
 </header>
-    <% for(let i = 0; i < response.length ; i++){ %>
-    <!-- <h1><%= response %></h1> -->
-    <h1 class="author">Author: <%= response[i].author %></h1>
+<!--Data from API-->
+    <% for(let i = 0; i < response.length ; i++){ %> -->
+    <h1><%= response %></h1>
+    <h1 class="author">Author: <%= response[i].author %></h1> 
     <h2 class="title">Title: <%= response[i].title %></h2>
     <h2 class="description">Description: <%= response[i].description %></h2>
     <p>URL: <%= response[i].url %></p>
@@ -28,11 +30,11 @@
     <p>Content: <%= response[i].content %></p>
     <img src="<%= response[i].urlToImage %>" />
     <br />
-    <%}%>
-  </body>
+    <%}%> -->
 
-<footer>
-    <p class="copyRight">&copy; 2022 News Outlet</p>
-    <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
-</footer>
+    <footer>
+      <p class="copyRight">&copy; 2022 News Outlet</p>
+      <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
+  </footer>
+  </body>
 </html>
