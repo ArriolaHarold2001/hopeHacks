@@ -1,17 +1,8 @@
-const apiKey = "9d662556d4944aaaa71c567219994789";
-const url = `https://newsapi.org/v2/everything?q=Apple&from=2022-02-14&sortBy=popularity&apiKey=${apiKey}`;
-let reqs;
+const countries = ["ae", "ar","at", "au","be", "bg","br", "ca","ch", "cn","co", "cu","cz", "de","eg", "fr","gb", "gr","hk", "hu","id", "ie","il", "in","it", "jp","kr", "lt","lv", "ma","mx", "my","ng", "nl","no", "nz","ph", "pl","pt", "ro","rs", "ru","sa", "se","sg", "si","sk", "th","tr", "tw","ua", "us","ve", "za",];
 
-router.get("/", (req, res) => {
-  const reqs = request(url, (err, res, body) => {
-  request(url, (err, res, body) => {
-    if (err) {
-      return;
-    } else {
-      return body;
-    }
-    reqs = body;
-  });
-  res.status(200).send(reqs);
-  })
-})
+
+
+const userContries = ["United Arab Emirates","Argentina","Austria","Belgium", "Bulgaria", "Brazil", "Canda", "Switzerland", "China", "Colombia", "Cuba", "Czech Republic", "Germany", "Egypt", "Frace", "United Kingdom", "Greece", "Hong Kong", "Hungary", "Indonesia", "Ireland", "Israel", "India", "Italy", "Japan", "South Korea", "Lithuania", "Latvia", "Morocco", "Mexico", "Malaysia", "Nigeria", "Netherlands", "Norway", "New Zealand", "Philippines", "Poland", "Portugal", "Romania", "Serbia", "Russia", "South Africa", "Sweden", "Singapore", "Slovenia", "Slovakia", "Thailand", "Turkey", "Taiwan", "Ukraine", "United States", "Venezuela", "South Africa"]
+
+
+console.log("Hello world");
