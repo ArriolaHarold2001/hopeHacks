@@ -4,43 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | News Outlet</title>
+    <title>News Outlet | Contact</title>
     <link rel="stylesheet" href="contact-style.css">
 </head>
 <body>
-    <!--Contact page -->
-<header>
-    <nav>
-        <!--Uncertain if there should be a nav-->
-        <!--Make two buttons that return to the home page and products?-->
-        <a href="index.html">Button</a>
-
+    <!--Header with main menu and links-->
+  <header>
+    <nav class="mainMenu"></nav>
+    <h2 class="logo">News Outlet</h2>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
     </nav>
-</header>
+  </header>
+    
+
+
+    <!--Main content-->
 <main>
-    <!--Contact-->
-    <section class="contact-box">
-        <h2>HAVE SOME QUESTIONS?</h2>
-        <form>
-        <input type="text" class="input-field" placeholder="Your Name">
-        <input type="text" class="input-field" placeholder="Your Email">
-        <input type="text" class="input-field" placeholder="Subject">
-        <textarea type="text" class="input-field textarea-field" placeholder="Your Message"></textarea> 
-        <button type="button" class="btn">Send Message</button>
-        </form>
+
+<section class="sectionContact">
+    <!--Contain content inside section and creating h1 and p tag-->
+    <section class="container">
+        <h1>Contact us</h1>
+        <p>Please fill out the form below to get in touch with one of our team members.
+            We will get back to you as soon as possible!  Please leave any comments or suggestions you have within the message box.</p>
+            <!--The form markup is for display only. It does not submit anything to the user-->
+            <form>
+                <!--Creating container labels for user to enter information-->
+                <section class="formGroup">
+                    <label for="firstName">First name *</label> <!--* means required-->
+                    <input type="text" 
+                    name="firstName" 
+                    id="firstName" 
+                    required class="formElement"
+                    placeholder="First Name">
+                </section>
+                <section class="formGroup">
+                    <label for="lastName">Last name *</label> <!--* means required-->
+                    <input type="text" 
+                    name="LastName" 
+                    id="firstName" 
+                    required class="formElement"
+                    placeholder="Last Name">
+                </section>
+                <section class="formGroup">
+                    <label for="email">Email address *</label> <!--* means required-->
+                    <input type="email" 
+                    name="email" 
+                    id="email" 
+                    required class="formElement"
+                    placeholder="Email">
+                </section>
+                <section class="formGroup">
+                    <label for="company">Company</label>
+                    <input type="company" 
+                    name="company" 
+                    id="company" 
+                    required class="formElement"
+                    placeholder="Company">
+                </section>
+                <!--Adding text area-->
+                <section class="formGroup full">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" class="formElement" placeholder="Message"></textarea>
+                </section>
+                <!--Submit button-->
+                <section class="submitGroup">
+                    <input type="submit" value="SEND MESSAGE">
+                </section>
+
+
+            </form>
     </section>
+</section>
 
 
-    <footer>
-        <p class="copyRight">&copy; 2022 News Outlet</p>
-        <p class="creators">Creators: Harold, Brenden, Emmanuel, Alannah</p>
-        <p class="contact">Please Contact us <a href="mailto:info&newsoutlet.com">here</a></p>
- </footer>   
 </main>
 
-
-
-
+<footer>
+    <p class="copyRight">&copy; 2022 News Outlet</p>
+    <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
+  </footer>
 
     
 </body>
