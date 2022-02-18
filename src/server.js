@@ -5,7 +5,8 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(__dirname + "public"));
+// app.use("/public", express.static(path.join(__dirname, "public")));
 
 const apiKey = process.env.APIKEY;
 const port = process.env.PORT;
