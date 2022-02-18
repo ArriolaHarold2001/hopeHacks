@@ -19,11 +19,6 @@
     </ul>
     </nav>
   </header>
-    
-
-
-    <!--Main content-->
-<main>
 
 <section class="sectionContact">
     <!--Contain content inside section and creating h1 and p tag-->
@@ -31,41 +26,37 @@
         <h1>Contact us</h1>
         <p>Please fill out the form below to get in touch with one of our team members.
             We will get back to you as soon as possible!  Please leave any comments or suggestions you have within the message box.</p>
-            <!--The form markup is for display only. It does not submit anything to the user-->
+            <!--The form markup is for display only. It does not submit anything to the database.-->
             <form>
                 <!--Creating container labels for user to enter information-->
                 <section class="formGroup">
-                    <label for="firstName">First name *</label> <!--* means required-->
+                    <label for="firstName">First name *</label>
                     <input type="text" 
                     name="firstName" 
-                    required class="formElement"
-                    placeholder="First Name">
+                    required class="formElement">
                 </section>
                 <section class="formGroup">
-                    <label for="lastName">Last name *</label> <!--* means required-->
+                    <label for="lastName">Last name *</label>
                     <input type="text" 
                     name="LastName"  
-                    required class="formElement"
-                    placeholder="Last Name">
+                    required class="formElement">
                 </section>
                 <section class="formGroup">
-                    <label for="email">Email address *</label> <!--* means required-->
+                    <label for="email">Email address *</label> 
                     <input type="email" 
                     name="email" 
-                    required class="formElement"
-                    placeholder="Email">
+                    required class="formElement">
                 </section>
                 <section class="formGroup">
                     <label for="company">Company</label>
                     <input type="company" 
                     name="company" 
-                    required class="formElement"
-                    placeholder="Company">
+                    required class="formElement">
                 </section>
                 <!--Adding text area-->
                 <section class="formGroup full">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" class="formElement" placeholder="Message"></textarea>
+                    <textarea name="message" id="message" class="formElement"></textarea>
                 </section>
                 <!--Submit button-->
                 <section class="submitGroup">
@@ -78,8 +69,8 @@
 </section>
 
 
-</main>
 
+<!--Bottom of contact page-->
 <footer>
     <p class="copyRight">&copy; 2022 News Outlet</p>
     <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
