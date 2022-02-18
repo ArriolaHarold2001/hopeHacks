@@ -3,11 +3,11 @@ document.querySelector(".idkyet").addEventListener("click", () => {
     console.log(response);
   });
 });
-// searchBar.textContent = `Insert keywords: "Trump", "Sports", etc `
+searchBar.textContent = `Insert keywords: "Trump", "Sports", etc `
 
-// const searchBarSection = document.querySelector(".search-section");
+const searchBarSection = document.querySelector(".search-section");
 
-// searchBarSection.appendChild(searchBar);
+searchBarSection.appendChild(searchBar);
 
 const countriesArray = [
   "|Country","ae|United Arab Emirates","ar|Argentina","at|Austria","au|Australia","be|Belgium","bg|Bulgaria","br|Brazil","ca|Canda","ch|Switzerland","cn|China","co|Colombia","cu|Cuba","cz|Czech Republic","de|Germany","eg|Egypt","fr|Frace","gb|United Kingdom","gr|Greece","hk|Hong Kong","hu|Hungary","id|Indonesia","ie|Ireland","il|Israel","in|India","it|Italy","jp|Japan","kr|South Korea","lt|Lithuania","lv|Latvia","ma|Morocco","mx|Mexico","my|Malaysia","ng|Nigeria","nl|Netherlands","no|Norway","nz|New Zealand","ph|Philippines","pl|Poland","pt|Portugal","ro|Romania","rs|Serbia","ru|Russia","sa|South Africa","se|Sweden","sg|Singapore","si|Slovenia","sk|Slovakia","th|Thailand","tr|Turkey","tw|Taiwan","ua|Ukraine", "us|United States","ve|Venezuela","za|South Africa",
@@ -43,13 +43,23 @@ function dropdownFunc(arr, section) {
 dropdownFunc(countriesArray, couDropdownSection);
 dropdownFunc(catergoryArray, catDropdownSection);
 
-var select = document.getElementById("country");
-var country = select.options[select.selectedIndex].value;
-console.log(country);
-var select = document.getElementById("category");
-var category = select.options[select.selectedIndex].value;
-console.log(category);
+const country;
+const category;
 
+
+const categeorySelect = () => {
+let select = document.getElementById("category");
+ category = select.options[select.selectedIndex].value;
+return category
+}
+
+const countrySelect = () => {
+    let select = document.getElementById("country");
+    let country = select.options[select.selectedIndex].value;
+    return country
+    }
+
+    console.log(country, category);
 // const userContriesArray = ["United Arab Emirates","Argentina","Austria","Australia","Belgium", "Bulgaria", "Brazil", "Canda", "Switzerland", "China", "Colombia", "Cuba", "Czech Republic", "Germany", "Egypt", "Frace", "United Kingdom", "Greece", "Hong Kong", "Hungary", "Indonesia", "Ireland", "Israel", "India", "Italy", "Japan", "South Korea", "Lithuania", "Latvia", "Morocco", "Mexico", "Malaysia", "Nigeria", "Netherlands", "Norway", "New Zealand", "Philippines", "Poland", "Portugal", "Romania", "Serbia", "Russia", "South Africa", "Sweden", "Singapore", "Slovenia", "Slovakia", "Thailand", "Turkey", "Taiwan", "Ukraine", "United States", "Venezuela", "South Africa"];
 
 // document.querySelector("")

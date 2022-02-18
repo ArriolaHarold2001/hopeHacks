@@ -1,9 +1,17 @@
 const express = require("express");
 const axios = require("axios").default;
+const path = require("path");
 
 const app = express();
 app.use(express.json());
 
+app.get("/", async (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, "../index.html"));
+  } catch (err) {
+    throw err;
+  }
+});
 const getArticleData = async () => {
   try {
     app.get("/api/news/:country/:category/:q?", async (req, res) => {
