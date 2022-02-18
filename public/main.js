@@ -1,7 +1,17 @@
 document.querySelector(".idkyet").addEventListener("click", () => {
-  fetch(`127.0.0.1:8000/api/news/jp/business/bitcoin`).then((response) => {
-    console.log(response);
-  });
+  fetch(`/api/news/:country/:category/q?`, {
+    method: "GET",
+    headers: {},
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((body) => {
+      console.log(typeof body, body);
+    })
+    .catch((err) => {
+      console.log("ERROR: ", err);
+    });
 });
 // searchBar.textContent = `Insert keywords: "Trump", "Sports", etc `
 
@@ -10,11 +20,72 @@ document.querySelector(".idkyet").addEventListener("click", () => {
 // searchBarSection.appendChild(searchBar);
 
 const countriesArray = [
-  "|Country","ae|United Arab Emirates","ar|Argentina","at|Austria","au|Australia","be|Belgium","bg|Bulgaria","br|Brazil","ca|Canda","ch|Switzerland","cn|China","co|Colombia","cu|Cuba","cz|Czech Republic","de|Germany","eg|Egypt","fr|Frace","gb|United Kingdom","gr|Greece","hk|Hong Kong","hu|Hungary","id|Indonesia","ie|Ireland","il|Israel","in|India","it|Italy","jp|Japan","kr|South Korea","lt|Lithuania","lv|Latvia","ma|Morocco","mx|Mexico","my|Malaysia","ng|Nigeria","nl|Netherlands","no|Norway","nz|New Zealand","ph|Philippines","pl|Poland","pt|Portugal","ro|Romania","rs|Serbia","ru|Russia","sa|South Africa","se|Sweden","sg|Singapore","si|Slovenia","sk|Slovakia","th|Thailand","tr|Turkey","tw|Taiwan","ua|Ukraine", "us|United States","ve|Venezuela","za|South Africa",
+  "|Country",
+  "ae|United Arab Emirates",
+  "ar|Argentina",
+  "at|Austria",
+  "au|Australia",
+  "be|Belgium",
+  "bg|Bulgaria",
+  "br|Brazil",
+  "ca|Canda",
+  "ch|Switzerland",
+  "cn|China",
+  "co|Colombia",
+  "cu|Cuba",
+  "cz|Czech Republic",
+  "de|Germany",
+  "eg|Egypt",
+  "fr|Frace",
+  "gb|United Kingdom",
+  "gr|Greece",
+  "hk|Hong Kong",
+  "hu|Hungary",
+  "id|Indonesia",
+  "ie|Ireland",
+  "il|Israel",
+  "in|India",
+  "it|Italy",
+  "jp|Japan",
+  "kr|South Korea",
+  "lt|Lithuania",
+  "lv|Latvia",
+  "ma|Morocco",
+  "mx|Mexico",
+  "my|Malaysia",
+  "ng|Nigeria",
+  "nl|Netherlands",
+  "no|Norway",
+  "nz|New Zealand",
+  "ph|Philippines",
+  "pl|Poland",
+  "pt|Portugal",
+  "ro|Romania",
+  "rs|Serbia",
+  "ru|Russia",
+  "sa|South Africa",
+  "se|Sweden",
+  "sg|Singapore",
+  "si|Slovenia",
+  "sk|Slovakia",
+  "th|Thailand",
+  "tr|Turkey",
+  "tw|Taiwan",
+  "ua|Ukraine",
+  "us|United States",
+  "ve|Venezuela",
+  "za|South Africa",
 ];
 
 const catergoryArray = [
-  "|Category","business|Business","technology|Technology","entertainment|Entertainment","general|General","health|Health","science|Science","sports|Sports",
+  "|Category",
+  "business|Business",
+  "technology|Technology",
+  "entertainment|Entertainment",
+  "general|General",
+  "health|Health",
+  "science|Science",
+  "sports|Sports",
 ];
 
 const catDropdownSection = document.querySelector("#category");

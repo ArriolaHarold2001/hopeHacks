@@ -1,8 +1,18 @@
 const express = require("express");
 const axios = require("axios").default;
+const path = require("path");
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
+app.use(express.static("public"));
+
+const apiKey = process.env.APIKEY;
+const port = process.env.PORT;
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 const getArticleData = async () => {
   try {
@@ -14,12 +24,12 @@ const getArticleData = async () => {
 
       if (!q) {
         response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=9d662556d4944aaaa71c567219994789`
+          `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`
         );
       }
 
       response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&${q}&apiKey=9d662556d4944aaaa71c567219994789`
+        `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&${q}&apiKey=${apiKey}`
       );
       const artPointer = Math.floor(
         Math.random() * response.data.articles.length
@@ -34,7 +44,6 @@ const getArticleData = async () => {
 
 getArticleData();
 
-const port = 8000;
 app.listen(port, () => {
   console.log(`Listening on port ${port}...`);
 });
