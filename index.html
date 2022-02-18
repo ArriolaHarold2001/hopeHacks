@@ -8,12 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Header with main menu-->
+    <header>
+    <nav class="mainMenu">
+      <h2 class="logo">News Outlet</h2>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    </header>
+    <!--Sections content area-->
     <section class="heroImage">
       <section class="container">
         <h1><span>News Outlet</span></h1>
         <form action=></form>
         <label for="Category">Choose a catergory</label>
-        <select id="category" name="catergory">
+        <select id="category" name="category">
         </select>
         <label for="country">Choose a country</label>
         <select id="country" name="country">
@@ -25,28 +37,9 @@
     
     <footer>
       <p class="copyRight">&copy; 2022 News Outlet</p>
-      <p class="creators">Creators: Harold, Brenden, Emmanuel, Alannah</p>
-      <p class="contact">
-        Please Contact us <a href="mailto:info&newsoutlet.com">here</a>
-      </p>
+      <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
     </footer>
     <button class="idkyet">Hi</button>
   </body>
   <script src="main.js"></script>
 </html>
-
-<!-- <select onClick="getDatafromApi([thevalueofthisselect])">
-  //for loop over each country from the countries object/array
-  <option>South Africa</option>
-  <option>South Africa</option>
-  <option>South Africa</option>
-</select>
-
-//ejs - server-side rendering
-// -see if you can do server-side rerouting
-
-getDataFromAPI(country) => {
-  rerouteTo("/api/news?country=southafrica").then(response => {
-
-  })
-} -->

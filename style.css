@@ -1,10 +1,41 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #F1F1F1;
+/* Resetting all page elements */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
   font-family: sans-serif;
 }
+/* Changing the background color */
+body {
+  background: #f1f1f1;;
+}
+
+
+/* Styling the navigation menu */
+
+.logo {
+  text-align: center;
+}
+
+.mainMenu, ul {
+  list-style: none;
+  text-align: center;  
+}
+
+.mainMenu, li {
+  display: inline-block;
+}
+
+.mainMenu, a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 25px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .heroImage {
   min-height: 80vh;
   position: relative;
@@ -28,14 +59,17 @@ body, html {
   text-transform: uppercase;
 }
 .container h1 {
-  font-size: 72px;
+  font-size: 55px;
   letter-spacing: 0.2em;
-  margin: 0;
+  margin-top: 15px;
+
+
 }
 .container h1 span {
   border: 10px solid #fff;
   padding: 6px 14px;
   display: inline-block;
+  /* margin-bottom: 15px; */
 }
 .dropdowns{
   position: absolute;
@@ -81,9 +115,23 @@ input[type=submit]{
 
 
 footer {
-  background: silver;
-  padding: 30px;
+  background:  #f1f1f1;
 }
-.copyRight, .creators, .contact {
+.copyRight,
+.creators {
   text-align: center;
+  font-size: 13px;
+  margin: auto;
+  padding: 10px;
 }
+
+
+/*Setting the footer*/
+.copyRight, .creators {
+  text-align: center;
+  margin: auto;
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* News page */
