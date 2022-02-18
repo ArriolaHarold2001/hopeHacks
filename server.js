@@ -1,18 +1,26 @@
 const express = require("express");
 const axios = require("axios").default;
 const path = require("path");
+const http = require("http");
 require("dotenv").config();
 
 const app = express();
+http.Server(app);
 app.use(express.json());
-app.use(express.static(__dirname + "public"));
-// app.use("/public", express.static(path.join(__dirname, "public")));
+
+app.use(express.static(path.join(__dirname, "/public")));
 
 const apiKey = process.env.APIKEY;
 const port = process.env.PORT;
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/contact.html"));
+});
+app.get("/news", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/news.html"));
 });
 
 const getArticleData = async () => {
