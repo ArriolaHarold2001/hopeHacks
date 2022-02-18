@@ -80,12 +80,6 @@ p {
 }
 
 
-/* Start from the first grid element and go all the way to the end */
-/* .full {
-grid-column: 1/-1;
-
-} */
-
 /* Resetting the appearance and fixing the outline */
 .formElement {
     display: block;
