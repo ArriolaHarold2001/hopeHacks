@@ -41,7 +41,7 @@ body, html {
   font-size: 26px;
   text-shadow: 0 0 10px #000;
 }
-.btn {
+/* .btn {
   color: #313131;
   padding: 10px 24px;
   font-size: 20px;
@@ -52,7 +52,26 @@ body, html {
 }
 .btn:hover {
   opacity: 0.8;
+} */
+
+
+/* Form CSS */
+form{
+  font-size: 15px;
 }
+label[for="country"] {
+  margin-left:5%;
+}
+input[type=submit]{
+  margin-left: 3%;
+  padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+
 footer {
   background: silver;
   padding: 30px;
