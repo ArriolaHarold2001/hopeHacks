@@ -1,0 +1,186 @@
+/* Resetting all page elements */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Changing the background color */
+body {
+    background: #f1f1f1;;
+}
+
+
+/* Styling the navigation menu */
+
+.logo {
+    text-align: center;
+}
+
+.mainMenu, ul {
+    list-style: none;
+    text-align: center;  
+}
+
+.mainMenu, li {
+    display: inline-block;
+}
+
+.mainMenu, a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 25px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* Creating space for elements within sectionContact to fit and a background with
+linear-gradient that has a specified degree and percentages 
+you can alter to create different effects.  Simply linear gradient
+creates a cut off on the page with a diagonal line and you can add colors as you 
+go along. */
+.sectionContact {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(175deg, #EEE, 50%, #b950c7 50%, #9B75D7);
+}
+
+/* Making adustments for h1 header */
+h1 {
+    color: #000;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;   
+}
+
+
+/* Changing the color, font-size and line-height to make it easier to read
+also pushing the form further down */
+
+p {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+}
+
+/* Grabbing formGroups and adding a display of block and pushing the input down */
+.formGroup ,label{
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+
+}
+
+
+/* Start from the first grid element and go all the way to the end */
+/* .full {
+grid-column: 1/-1;
+
+} */
+
+/* Resetting the appearance and fixing the outline */
+.formElement {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: #f3f3f3;
+    appearance: none;
+    outline: none;
+    border: none;
+
+}
+
+/* Highlights with box shawdow for inputs and creating a transition so the 
+elements can pull off the page with the background color of white. */
+.formElement:focus {
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+    background-color: #FFF;
+    transition: 0.4s;
+}
+
+
+textarea {
+    resize: none; /* This will allow you to no longer resize the textarea message*/
+    min-height: 100px;
+}
+
+
+/* Styling the submit button */
+.submitGroup input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 12px 16px;
+    background-color: #000000;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4;
+}
+
+/* Moving submit button to the right*/
+.submitGroup {
+    text-align: right;
+}
+
+/* Hover effect after transition */
+.submitGroup input:hover {
+    background-color: #9B75D7;
+}
+
+/* Styling up the elements using grid and adding adustments, also adding in
+a media query to adjust the grid for a bigger screen size */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    @media(min-width: 768px){
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+
+/* Setting width and some responsiveness with mobile and creating a medias for 
+different screen sizes  */
+.container {
+    max-width: 1280px;
+    margin: auto;
+    /* Smart phone */
+    padding-left: 32px;
+    padding-right: 32px;
+    /* Ipad */
+    @media (min-width: 768px) {
+        padding-left: 64px;
+        padding-right: 64px;
+
+    }
+    /* Ipad landscape and bigger  */
+    @media (min-width: 1024px) {
+        padding-left: 128px;
+        padding-right: 128px;
+
+    }
+ 
+}
+
+/*Setting the footer*/
+.copyRight, .creators {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
