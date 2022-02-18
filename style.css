@@ -83,6 +83,36 @@ body {
   font-size: 26px;
   text-shadow: 0 0 10px #000;
 }
+/* .btn {
+  color: #313131;
+  padding: 10px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #F1F1F1;
+  border-radius: 8px;
+  transition: 0.3s all;
+}
+.btn:hover {
+  opacity: 0.8;
+} */
+
+
+/* Form CSS */
+form{
+  font-size: 15px;
+}
+label[for="country"] {
+  margin-left:5%;
+}
+input[type=submit]{
+  margin-left: 3%;
+  padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
 
 footer {
   background:  #f1f1f1;
