@@ -1,15 +1,14 @@
 /* Resetting all page elements */
 * {
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 /* Changing the background color */
 body {
-  background: #f1f1f1;;
+  background: #f1f1f1;
 }
-
 
 /* Styling the navigation menu */
 
@@ -17,16 +16,19 @@ body {
   text-align: center;
 }
 
-.mainMenu, ul {
+.mainMenu,
+ul {
   list-style: none;
-  text-align: center;  
+  text-align: center;
 }
 
-.mainMenu, li {
+.mainMenu,
+li {
   display: inline-block;
 }
 
-.mainMenu, a {
+.mainMenu,
+a {
   display: block;
   text-decoration: none;
   color: #000;
@@ -63,8 +65,6 @@ body {
   font-size: 55px;
   letter-spacing: 0.2em;
   margin-top: 15px;
-
-
 }
 .container h1 span {
   border: 10px solid #fff;
@@ -72,7 +72,7 @@ body {
   display: inline-block;
   /* margin-bottom: 15px; */
 }
-.dropdowns{
+.dropdowns {
   position: absolute;
   top: 20%;
   left: 25%;
@@ -85,26 +85,24 @@ body {
   text-shadow: 0 0 10px #000;
 }
 
-
 /* Form CSS */
-form{
+form {
   font-size: 15px;
 }
 label[for="country"] {
-  margin-left:5%;
+  margin-left: 5%;
 }
-input[type=submit]{
+input[type="submit"] {
   margin-left: 3%;
-  padding:5px 15px;
-    background:#ccc;
-    border:0 none;
-    cursor:pointer;
-    border-radius: 5px;
+  padding: 5px 15px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  border-radius: 5px;
 }
-
 
 footer {
-  background:  #f1f1f1;
+  background: #f1f1f1;
 }
 .copyRight,
 .creators {
@@ -114,11 +112,16 @@ footer {
   padding: 10px;
 }
 
-
 /*Setting the footer*/
-.copyRight, .creators {
+.copyRight,
+.creators {
   text-align: center;
   margin: auto;
   font-size: 14px;
   padding: 10px;
 }
+<<<<<<< HEAD:style.css
+=======
+
+/* News page */
+>>>>>>> 5eafb8a4ab4e2ccf9b0888713f6df76d103b78dc:public/styles/style.css
