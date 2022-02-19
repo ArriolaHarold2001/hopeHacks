@@ -138,3 +138,5 @@ function categoryFilter() {
     selectCountry.options[selectCountry.selectedIndex].value;
   return userInputCountry;
 }
+
+document.querySelector("#category").addEventListener();
