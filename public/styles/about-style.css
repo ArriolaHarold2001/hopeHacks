@@ -181,9 +181,13 @@ footer {
   }
 
   .aboutSection p {
-    margin-top: 10rem;
+    padding-top: 10rem;
     font-size: 2rem;
     line-height: 2.5rem;
     text-align: left;
+  }
+
+  .funImg img {
+    display: none;
   }
 }
