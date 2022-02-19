@@ -11,7 +11,7 @@
 
 ## Using the app
 
-- Go to [title](https://fierce-beyond-88455.herokuapp.com/)
+- Go to [NewsOutlet Website](https://fierce-beyond-88455.herokuapp.com/)
 - Select a category from the category dropdown
 
 - Select a country from our country dropdown
