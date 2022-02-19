@@ -13,10 +13,9 @@ document.querySelector(".idkyet").addEventListener("click", () => {
       console.log("ERROR: ", err);
     });
 });
-// searchBar.textContent = `Insert keywords: "Trump", "Sports", etc `
 
 // const searchBarSection = document.querySelector(".search-section");
-
+// // searchBarSection.textContent = `Insert keywords: "Trump", "Sports", etc `
 // searchBarSection.appendChild(searchBar);
 
 const countriesArray = [
@@ -114,29 +113,27 @@ function dropdownFunc(arr, section) {
 dropdownFunc(countriesArray, couDropdownSection);
 dropdownFunc(catergoryArray, catDropdownSection);
 
-var select = document.getElementById("country");
-var country = select.options[select.selectedIndex].value;
-console.log(country);
-var select = document.getElementById("category");
-var category = select.options[select.selectedIndex].value;
+let country = "";
+let category = "";
+
+// supposed to get the value of the selected country and category the user chose
+// const categorySelected = () => {
+// let select = document.getElementById("category");
+//  category = select.options[select.selectedIndex].value;
+//  console.log(category)
+// return category
+// }
+
+// const countrySelected = () => {
+//     let select = document.getElementById("country");
+//     let country = select.options[select.selectedIndex].value;
+//     return country
+//     }
+
+document.querySelector("#category").addEventListener("change", () => {
+  let select = document.getElementById("category");
+  category = select.options[select.selectedIndex].value;
+  return category;
+});
+
 console.log(category);
-
-// const userContriesArray = ["United Arab Emirates","Argentina","Austria","Australia","Belgium", "Bulgaria", "Brazil", "Canda", "Switzerland", "China", "Colombia", "Cuba", "Czech Republic", "Germany", "Egypt", "Frace", "United Kingdom", "Greece", "Hong Kong", "Hungary", "Indonesia", "Ireland", "Israel", "India", "Italy", "Japan", "South Korea", "Lithuania", "Latvia", "Morocco", "Mexico", "Malaysia", "Nigeria", "Netherlands", "Norway", "New Zealand", "Philippines", "Poland", "Portugal", "Romania", "Serbia", "Russia", "South Africa", "Sweden", "Singapore", "Slovenia", "Slovakia", "Thailand", "Turkey", "Taiwan", "Ukraine", "United States", "Venezuela", "South Africa"];
-
-// document.querySelector("")
-// supposed to get the value of the selected country and category the user chose
-function categoryFilter() {
-  var selectCategory = document.getElementById("category");
-  var userInputCategory =
-    selectCategory.options[selectCategory.selectedIndex].value;
-  return userInputCategory;
-}
-// supposed to get the value of the selected country and category the user chose
-function categoryFilter() {
-  var selectCountry = document.getElementById("country");
-  var userInputCountry =
-    selectCountry.options[selectCountry.selectedIndex].value;
-  return userInputCountry;
-}
-
-document.querySelector("#category").addEventListener();
