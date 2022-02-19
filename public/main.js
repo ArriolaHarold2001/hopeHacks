@@ -141,7 +141,6 @@ document.querySelector("#api-btn").addEventListener("click", (e) => {
       resImg = body.urlToImage;
       resContent = body.content;
       resUrl = body.url;
-      console.log(resImg);
 
       let html = `
       <section class="res-submission">
@@ -149,22 +148,19 @@ document.querySelector("#api-btn").addEventListener("click", (e) => {
         <h2>${resTitle}</h2>
       </div>
       <div class="res-author">
-        <h3>${resAuthor === "String" ? resAuthor : "No Author"}</h3>
+        <h3>${resAuthor}</h3>
+        <h3>|</h3>
+        <h3>${resSource}</h3>
       </div>
       <div class="res-description">
-        <h4>${resDescription}</h4>
-      </div>
-      <div class="res-Source">
-        <p>${resSource}</p>
+      <h4>${resDescription}</h4>
       </div>
       <div class="res-img">
         <img src="${body.urlToImage}"/>
       </div>
       <div class="res-content">
-        <p>${resContent}</p>
-      </div>
-      <div class="res-url">
-        <p>${resUrl}</p>
+        <p>${resContent} </p>
+        <a href="${resUrl}" target="_blank">...</a>
       </div>
     </section>
       `;
@@ -172,10 +168,10 @@ document.querySelector("#api-btn").addEventListener("click", (e) => {
       submission.insertAdjacentHTML("afterend", html);
     })
     .catch((err) => {
-      console.log("ERROR: ", err);
+      throw err;
     });
 });
 
-const renderNews = function (news) {};
-
-renderNews();
+/* <div class="res-url">
+<a href="${resUrl}" target="_blank">...</a>
+</div> */
