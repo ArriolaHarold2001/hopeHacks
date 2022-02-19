@@ -20,7 +20,7 @@ const countriesArray = [
   "cz|Czech Republic",
   "de|Germany",
   "eg|Egypt",
-  "fr|Frace",
+  "fr|France",
   "gb|United Kingdom",
   "gr|Greece",
   "hk|Hong Kong",
