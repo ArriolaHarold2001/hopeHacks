@@ -14,28 +14,39 @@
   <body>
     <!--Header with main menu-->
     <header>
+      
     <nav class="mainMenu">
-      <h2 class="logo">News Outlet</h2>
+      <div class="mainSpace">
+      <div class="logoSpace">
+      <h2 class="logo">News</h2>
+      <h2 class="logo">Outlet</h2>
+    </div>
       <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/news">News</a></li>
+          <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
       </ul>
+    </div>
     </nav>
     </header>
     <!--Sections content area-->
-    <section class="heroImage">
-      <section class="container">
+    <section class="container">
+      <section class="heroImage">
+        <div>
         <h1><span>News Outlet</span></h1>
-        <form action=></form>
-        <label for="category">Choose a catergory</label>
-        <select id="category" name="category">
+        </div>
+        <div class="dropSelect">
+        <!-- <form action=> -->
+        <div class="catSpace">
+        <select id="category" type ="text" name="category">
         </select>
-        <label for="country">Choose a country</label>
-        <select id="country" name="country">
+        </div>
+        <div class= "countrySpace">
+        <select id="country" type ="text" name="country"> 
         </select>
-        <br>
-        <button id="api-btn"  >Submit</button>
+        </div>
+      </div>
+        <button id="api-btn"  >GET NEWS</button>
       </form>
       </section>
     </section>
