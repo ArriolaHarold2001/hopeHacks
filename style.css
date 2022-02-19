@@ -99,19 +99,25 @@ body {
 
 /* Form CSS */
 form{
-  font-size: 15px;
+  font-size: 25px;
+  padding-top: 7%;
 }
 label[for="country"] {
   margin-left:5%;
 }
+
 input[type=submit]{
   margin-left: 3%;
-  padding:5px 15px;
-    background:#ccc;
-    border:0 none;
-    cursor:pointer;
-    border-radius: 5px;
+  padding:5px 55px;
+  background:#ccc;
+  border:0 none;
+  cursor:pointer;
+  border-radius: 5px;
+  margin-top: 5%; 
+  transition: 0.8s;
+
 }
+[type="submit"]:hover { background:lightskyblue;}
 
 
 footer {
