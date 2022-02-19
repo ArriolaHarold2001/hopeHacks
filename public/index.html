@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Outlet | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
     <base href="/">
     <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
+    <title>News Outlet | Home</title>
   </head>
   <body>
     <!--Header with main menu-->
@@ -31,9 +34,21 @@
         <label for="country">Choose a country</label>
         <select id="country" name="country">
         </select>
-          <input type="submit">
-        </form>
+        <br>
+        <button id="api-btn"  >Submit</button>
+      </form>
       </section>
+    </section>
+
+    <section class="res-submission">
+      <h1>News will appear here</h1>
+      <!-- <div class="res-title"></div>
+      <div class="res-author"></div>
+      <div class="res-description"></div>
+      <div class="res-publishedAt"></div>
+      <div class="res-img"></div>
+      <div class="res-content"></div>
+      <div class="res-url"></div> -->
     </section>
     
     <!--Bottom of home page-->
@@ -41,7 +56,6 @@
       <p class="copyRight">&copy; 2022 News Outlet</p>
       <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
     </footer>
-    <button class="idkyet">Hi</button>
   </body>
   <script src="./main.js"></script>
 </html>

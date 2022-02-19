@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+html {
+  font-size: 62.5%;
+}
+
 /* Changing the background color */
 body {
   background: #f1f1f1;
@@ -38,8 +43,8 @@ a {
   display: block;
   text-decoration: none;
   color: #000;
-  padding: 0px 7px;
-  font-size: 14px;
+  padding: 2.5rem 2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -48,7 +53,7 @@ a {
 .heroImage {
   min-height: 80vh;
   position: relative;
-  height: 500px;
+  height: 50rem;
   overflow: hidden;
   background: url("https://ak.picdn.net/shutterstock/videos/1055155337/thumb/1.jpg");
   background-repeat: no-repeat;
@@ -68,13 +73,13 @@ a {
   text-transform: uppercase;
 }
 .container h1 {
-  font-size: 55px;
+  font-size: 5.5rem;
   letter-spacing: 0.2em;
-  margin-top: 15px;
+  margin-top: 1.5rem;
 }
 .container h1 span {
-  border: 10px solid #fff;
-  padding: 6px 14px;
+  border: 1rem solid #fff;
+  padding: 0.6rem 1.4rem;
   display: inline-block;
   /* margin-bottom: 15px; */
 }
@@ -85,26 +90,26 @@ a {
   margin: 10rem auto;
 }
 .info {
-  margin: 20px;
+  margin: 2rem;
   display: block;
-  font-size: 26px;
-  text-shadow: 0 0 10px #000;
+  font-size: 2.6rem;
+  text-shadow: 0 0 1rem #000;
 }
 
 /* Form CSS */
 form {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 label[for="country"] {
   margin-left: 5%;
 }
 input[type="submit"] {
   margin-left: 3%;
-  padding: 5px 15px;
+  padding: 0.5rem 1.5rem;
   background: #ccc;
   border: 0 none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 footer {
@@ -113,9 +118,9 @@ footer {
 .copyRight,
 .creators {
   text-align: center;
-  font-size: 13px;
+  font-size: 1.3rem;
   margin: auto;
-  padding: 10px;
+  padding: 1rem;
 }
 
 /*Setting the footer*/
@@ -123,6 +128,85 @@ footer {
 .creators {
   text-align: center;
   margin: auto;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 1.4rem;
+  padding: 1rem;
 }
+
+/* NEWS PAGE */
+
+/* 
+Font Weights
+300 / 400 / 500 / 700
+
+TYPE SCALE 
+10 / 13 / 18 / 24 / 32 / 42
+ */
+
+.res-submission p,
+.res-submission h1,
+.res-submission h2,
+.res-submission h3,
+.res-submission h4 {
+  font-family: "Ubuntu", sans-serif;
+
+  color: #f1f1f1;
+}
+
+.res-submission img {
+  width: 120rem;
+}
+
+.res-submission {
+  background-color: black;
+  width: 120rem;
+  margin: 3rem auto;
+  border-radius: 3rem;
+  padding: 6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.res-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.res-author {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.res-source {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.res-description {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.res-img {
+}
+.res-content {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+/* .res-url {
+} */
+
+/* <!-- <div class="res-title"></div>
+      <div class="res-author"></div>
+      <div class="res-description"></div>
+      <div class="res-publishedAt"></div>
+      <div class="res-img"></div>
+      <div class="res-content"></div>
+      <div class="res-url"></div> --> */

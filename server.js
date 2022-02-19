@@ -25,20 +25,13 @@ app.get("/news", (req, res) => {
 
 const getArticleData = async () => {
   try {
-    app.get("/api/news/:country/:category/:q?", async (req, res) => {
+    app.get("/api/news/:country/:category", async (req, res) => {
       const country = req.params.country;
       const category = req.params.category;
-      const q = req.params.q;
       let response;
 
-      if (!q) {
-        response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`
-        );
-      }
-
       response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&${q}&apiKey=${apiKey}`
+        `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`
       );
       const artPointer = Math.floor(
         Math.random() * response.data.articles.length

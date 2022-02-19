@@ -1,19 +1,4 @@
-document.querySelector(".idkyet").addEventListener("click", () => {
-  fetch(`/api/news/:country/:category/q?`, {
-    method: "GET",
-    headers: {},
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((body) => {
-      console.log(typeof body, body);
-    })
-    .catch((err) => {
-      console.log("ERROR: ", err);
-    });
-});
-
+"use strict";
 // const searchBarSection = document.querySelector(".search-section");
 // // searchBarSection.textContent = `Insert keywords: "Trump", "Sports", etc `
 // searchBarSection.appendChild(searchBar);
@@ -88,7 +73,6 @@ const catergoryArray = [
 ];
 
 const catDropdownSection = document.querySelector("#category");
-
 const couDropdownSection = document.querySelector("#country");
 
 // creating a function that creates dropdowns
@@ -113,27 +97,81 @@ function dropdownFunc(arr, section) {
 dropdownFunc(countriesArray, couDropdownSection);
 dropdownFunc(catergoryArray, catDropdownSection);
 
+let selectCategory = document.getElementById("category");
+let selectCountry = document.getElementById("country");
+let submission = document.querySelector(".res-submission");
 let country = "";
 let category = "";
 
-// supposed to get the value of the selected country and category the user chose
-// const categorySelected = () => {
-// let select = document.getElementById("category");
-//  category = select.options[select.selectedIndex].value;
-//  console.log(category)
-// return category
-// }
-
-// const countrySelected = () => {
-//     let select = document.getElementById("country");
-//     let country = select.options[select.selectedIndex].value;
-//     return country
-//     }
-
 document.querySelector("#category").addEventListener("change", () => {
-  let select = document.getElementById("category");
-  category = select.options[select.selectedIndex].value;
-  return category;
+  category = selectCategory.options[selectCategory.selectedIndex].value;
+  // console.log(category);
+});
+document.querySelector("#country").addEventListener("change", () => {
+  country = selectCountry.options[selectCountry.selectedIndex].value;
+  // console.log(country);
 });
 
-console.log(category);
+// let url = "";
+let resTitle = "";
+let resAuthor = "";
+let resDescription = "";
+let resSource = "";
+let resImg = "";
+let resContent = "";
+let resUrl = "";
+
+document.querySelector("#api-btn").addEventListener("click", (e) => {
+  e.preventDefault();
+  // window.location = "/news";
+  // url = `/api/news/${country}/${category}/`;
+
+  fetch(`/api/news/${country}/${category}/`, {
+    method: "GET",
+    headers: {},
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((body) => {
+      resTitle = body.title;
+      resAuthor = body.author;
+      resDescription = body.description;
+      resSource = body.source.name;
+      resImg = body.urlToImage;
+      resContent = body.content;
+      resUrl = body.url;
+
+      let html = `
+      <section class="res-submission">
+      <div class="res-title">
+        <h2>${resTitle}</h2>
+      </div>
+      <div class="res-author">
+        <h3>${resAuthor}</h3>
+        <h3>|</h3>
+        <h3>${resSource}</h3>
+      </div>
+      <div class="res-description">
+      <h4>${resDescription}</h4>
+      </div>
+      <div class="res-img">
+        <img src="${body.urlToImage}"/>
+      </div>
+      <div class="res-content">
+        <p>${resContent} </p>
+        <a href="${resUrl}" target="_blank">...</a>
+      </div>
+    </section>
+      `;
+
+      submission.insertAdjacentHTML("afterend", html);
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
+
+/* <div class="res-url">
+<a href="${resUrl}" target="_blank">...</a>
+</div> */
