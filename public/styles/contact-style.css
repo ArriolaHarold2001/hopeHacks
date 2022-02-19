@@ -16,6 +16,9 @@ body {
 
 /* Styling the navigation menu */
 
+.mobile-nav {
+  display: none;
+}
 .mainMenu {
   border-top: 1rem solid navy;
 }
