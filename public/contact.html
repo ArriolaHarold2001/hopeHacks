@@ -11,12 +11,17 @@
     <!--Header with main menu and links-->
     <header>
       <nav class="mainMenu">
-        <h2 class="logo">News Outlet</h2>
+        <div class="mainSpace">
+        <div class="logoSpace">
+        <h2 class="logo">News</h2>
+        <h2 class="logo">Outlet</h2>
+      </div>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/news">News</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
+      </div>
       </nav>
     </header>
 
@@ -42,7 +47,7 @@
                 name="firstName"
                 required
                 class="formElement"
-                placeholder="First Name"
+               
               />
             </section>
             <section class="formGroup">
@@ -52,8 +57,7 @@
                 type="text"
                 name="LastName"
                 required
-                class="formElement"
-                placeholder="Last Name"
+                class="formElement"e"
               />
             </section>
             <section class="formGroup">
@@ -63,9 +67,7 @@
                 type="email"
                 name="email"
                 required
-                class="formElement"
-                placeholder="Email"
-              />
+                class="formElement"             />
             </section>
             <section class="formGroup">
               <label for="company">Company</label>
@@ -74,7 +76,6 @@
                 name="company"
                 required
                 class="formElement"
-                placeholder="Company"
               />
             </section>
             <!--Adding text area-->
@@ -84,7 +85,6 @@
                 name="message"
                 id="message"
                 class="formElement"
-                placeholder="Message"
               ></textarea>
             </section>
             <!--Submit button-->

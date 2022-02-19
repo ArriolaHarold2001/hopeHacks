@@ -159,8 +159,8 @@ document.querySelector("#api-btn").addEventListener("click", (e) => {
         <img src="${body.urlToImage}"/>
       </div>
       <div class="res-content">
-        <p>${resContent} </p>
-        <a href="${resUrl}" target="_blank">...</a>
+        <p>${resContent}  </p>
+        <a href="${resUrl}" target="_blank">${resSource} ↗️</a>
       </div>
     </section>
       `;

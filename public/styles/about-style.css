@@ -1,0 +1,107 @@
+/* Resetting all page elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+/* Changing the background color */
+body {
+  background-color: white;
+  /* font-family: "Ubuntu", sans-serif; */
+}
+
+/* Styling the navigation menu */
+
+.mainMenu {
+  border-top: 1rem solid navy;
+  margin-bottom: 3rem;
+}
+.mainMenu,
+ul {
+  list-style: none;
+  text-align: center;
+}
+.mainSpace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainMenu,
+li {
+  padding: 1rem;
+  display: inline-block;
+}
+
+.mainMenu,
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container {
+  background-image: url("/img/layered-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  min-height: 100vh;
+}
+.container h1 {
+  text-align: center;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+}
+.aboutSection {
+  font-weight: 700;
+  width: 100rem;
+  margin: 4rem auto;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+.aboutSection p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#ad5389, #3c1053);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: justify;
+  line-height: 5rem;
+}
+.funImg img {
+  z-index: 9999;
+  width: 30rem;
+  height: 20rem;
+  position: absolute;
+  inset: 40rem 0 0 0;
+  object-fit: contain;
+}
+
+/*Setting the footer*/
+footer {
+  background: #fff;
+  padding: 6rem;
+  font-weight: 500;
+  border-top: 0.1rem dashed #212529;
+}
+.copyRight,
+.creators {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: auto;
+  padding: 1rem;
+}
