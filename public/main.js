@@ -13,11 +13,11 @@ document.querySelector(".idkyet").addEventListener("click", () => {
       console.log("ERROR: ", err);
     });
 });
-searchBar.textContent = `Insert keywords: "Trump", "Sports", etc `
 
-const searchBarSection = document.querySelector(".search-section");
 
-searchBarSection.appendChild(searchBar);
+// const searchBarSection = document.querySelector(".search-section");
+// // searchBarSection.textContent = `Insert keywords: "Trump", "Sports", etc `
+// searchBarSection.appendChild(searchBar);
 
 const countriesArray = [
   "|Country",
@@ -110,28 +110,35 @@ function dropdownFunc(arr, section) {
   }
 }
 
+
+
 // call dropdown function to create the menu
 dropdownFunc(countriesArray, couDropdownSection);
 dropdownFunc(catergoryArray, catDropdownSection);
 
-const country;
-const category;
+let country = "";
+let category = "";
 
 // supposed to get the value of the selected country and category the user chose
-const categeorySelect = () => {
-let select = document.getElementById("category");
- category = select.options[select.selectedIndex].value;
-return category
-}
+// const categorySelected = () => {
+// let select = document.getElementById("category");
+//  category = select.options[select.selectedIndex].value;
+//  console.log(category)
+// return category
+// }
 
-const countrySelect = () => {
-    let select = document.getElementById("country");
-    let country = select.options[select.selectedIndex].value;
-    return country
-    }
+// const countrySelected = () => {
+//     let select = document.getElementById("country");
+//     let country = select.options[select.selectedIndex].value;
+//     return country
+//     }
 
-    console.log(country, category);
+document.querySelector("#category").addEventListener("change", () => {
+ let select = document.getElementById("category");
+  category = select.options[select.selectedIndex].value;
+  return category
+})
 
 
-
+console.log(category);
 
