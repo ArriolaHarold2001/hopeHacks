@@ -10,18 +10,18 @@
   <body>
     <!--Header with main menu and links-->
     <header>
-      <nav class="mainMenu">
+      <nav class="mainMenu main-nav">
         <div class="mainSpace">
-        <div class="logoSpace">
-        <h2 class="logo">News</h2>
-        <h2 class="logo">Outlet</h2>
-      </div>
-        <ul>
+          <div class="logoSpace">
+            <h2 class="logo">News</h2>
+            <h2 class="logo">Outlet</h2>
+          </div>
+          <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -47,27 +47,18 @@
                 name="firstName"
                 required
                 class="formElement"
-               
               />
             </section>
             <section class="formGroup">
               <label for="lastName">Last name *</label>
               <!--* means required-->
-              <input
-                type="text"
-                name="LastName"
-                required
-                class="formElement"e"
+              <input type="text" name="LastName" required class="formElement"e"
               />
             </section>
             <section class="formGroup">
               <label for="email">Email address *</label>
               <!--* means required-->
-              <input
-                type="email"
-                name="email"
-                required
-                class="formElement"             />
+              <input type="email" name="email" required class="formElement" />
             </section>
             <section class="formGroup">
               <label for="company">Company</label>
@@ -100,5 +91,10 @@
       <p class="copyRight">&copy; 2022 News Outlet</p>
       <p class="creators">Creators: Harold | Brenden | Emmanuel | Alannah</p>
     </footer>
+    <div class="main-menu mobile-nav" id="mobileNav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
   </body>
 </html>

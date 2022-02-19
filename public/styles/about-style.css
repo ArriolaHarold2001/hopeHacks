@@ -105,3 +105,85 @@ footer {
   margin: auto;
   padding: 1rem;
 }
+
+/* 1168PX */
+@media screen and (max-width: 73em) {
+  body {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/* 944PX */
+@media screen and (max-width: 59em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 768PX */
+@media screen and (max-width: 48em) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+/* 540PX */
+@media screen and (max-width: 34em) {
+  html {
+    font-size: 40%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: contents;
+  }
+
+  #mobileNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 10vh;
+    background-color: #f7f7f7;
+    box-shadow: 0 0.5rem 1rem#000;
+    position: fixed;
+    inset: 0 0 0 0;
+  }
+
+  .aboutSection {
+    width: 80%;
+    height: 100%;
+  }
+
+  .aboutSection p {
+    margin-top: 10rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: left;
+  }
+}

@@ -1,61 +1,56 @@
 /* Resetting all page elements */
 * {
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 html {
-    font-size: 62.5%;
-  }
-  
-/* Changing the background color */
-body {
-    background: #f1f1f1;;
+  font-size: 62.5%;
 }
 
+/* Changing the background color */
+body {
+  background: #f1f1f1;
+}
 
 /* Styling the navigation menu */
 
-.mainMenu{
-    border-top: 1rem solid navy;
-  }
-  .mainMenu,
-  ul {
-    list-style: none;
-    text-align: center;
-    
-  }
-  .mainSpace{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logoSpace{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .mainMenu,
-  li {
-   padding: 1rem;
-   display: inline-block;
-  }
-  
-  .mainMenu,
-  a {
-    display: block;
-    text-decoration: none;
-    color: #000;
-    padding: 1rem 2rem;
-    font-size: 2.4rem;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-  }
+.mainMenu {
+  border-top: 1rem solid navy;
+}
+.mainMenu,
+ul {
+  list-style: none;
+  text-align: center;
+}
+.mainSpace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainMenu,
+li {
+  padding: 1rem;
+  display: inline-block;
+}
 
-
-
+.mainMenu,
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /* Creating space for elements within sectionContact to fit and a background with
 linear-gradient that has a specified degree and percentages 
@@ -63,146 +58,223 @@ you can alter to create different effects.  Simply linear gradient
 creates a cut off on the page with a diagonal line and you can add colors as you 
 go along. */
 .sectionContact {
-    min-height: 100vh;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    background-image: linear-gradient(175deg, #EEE, 50%, #b950c7 50%, #9B75D7);
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-image: linear-gradient(175deg, #eee, 50%, #b950c7 50%, #9b75d7);
 }
 
 /* Making adustments for h1 header */
 h1 {
-    color: #000;
-    font-size: 3.6rem;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 4rem;   
+  color: #000;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4rem;
 }
-
 
 /* Changing the color, font-size and line-height to make it easier to read
 also pushing the form further down */
 
 p {
-    color: rgb(0, 0, 0);
-    font-size: 1.8rem;
-    line-height: 1.5;
-    margin-bottom: 3.2rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 3.2rem;
 }
 
 /* Grabbing formGroups and adding a display of block and pushing the input down */
-.formGroup ,label{
-    display: block;
-    margin-bottom: .5rem;
-    color: rgb(0, 0, 0);
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
+.formGroup,
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-
 
 /* Resetting the appearance and fixing the outline */
 .formElement {
-    display: block;
-    width: 100%;
-    border-radius: .8rem;
-    padding: 1.2rem 1.6rem;
-    background-color: #f3f3f3;
-    appearance: none;
-    outline: none;
-    border: none;
-
+  display: block;
+  width: 100%;
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.6rem;
+  background-color: #f3f3f3;
+  appearance: none;
+  outline: none;
+  border: none;
 }
 
 /* Highlights with box shawdow for inputs and creating a transition so the 
 elements can pull off the page with the background color of white. */
 .formElement:focus {
-    box-shadow: 0rem 0rem .6rem rgba(0,0,0,0.2);
-    background-color: #FFF;
-    transition: 0.4s;
+  box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: 0.4s;
 }
-
 
 textarea {
-    resize: none; /* This will allow you to no longer resize the textarea message*/
-    min-height: 10rem;
+  resize: none; /* This will allow you to no longer resize the textarea message*/
+  min-height: 10rem;
 }
-
 
 /* Styling the submit button */
 .submitGroup input {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    padding: 1.2rem 1.6rem;
-    background-color: #000000;
-    border-radius: .8rem;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.4;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 1.2rem 1.6rem;
+  background-color: #000000;
+  border-radius: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4;
 }
 
 /* Moving submit button to the right*/
 .submitGroup {
-    text-align: right;
+  text-align: right;
 }
 
 /* Hover effect after transition */
 .submitGroup input:hover {
-    background-color: #9B75D7;
+  background-color: #9b75d7;
 }
 
 /* Styling up the elements using grid and adding adustments, also adding in
 a media query to adjust the grid for a bigger screen size */
 form {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1.6rem;
-    background-color: #fff;
-    padding: 3.2rem;
-    border-radius: 1.6rem;
-    box-shadow: 0rem .6rem 1.2rem rgba(0, 0, 0, 0.2);
-    @media(min-width: 76.8rem){
-        grid-template-columns: repeat(2, 1fr)
-    }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.6rem;
+  background-color: #fff;
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  box-shadow: 0rem 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+  @media (min-width: 76.8rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 footer {
-    background: #f1f1f1;
-    padding: 6rem;
-    font-weight: 500;
-    border-top: .1rem dashed #212529;
-  }
-  .copyRight, .creators {
-    text-align: center;
-    margin: auto;
-    padding: 1rem;
+  background: #f1f1f1;
+  padding: 6rem;
+  font-weight: 500;
+  border-top: 0.1rem dashed #212529;
+}
+.copyRight,
+.creators {
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
 }
 
 /* Setting width and some responsiveness with mobile and creating a medias for 
 different screen sizes  */
 .container {
-    max-width: 128rem;
-    margin: auto;
-    /* Smart phone */
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-    /* Ipad */
-    @media (min-width: 76.8rem) {
-        padding-left: 6.4rem;
-        padding-right: 6.4rem;
-
-    }
-    /* Ipad landscape and bigger  */
-    /* 64em is equal to 1024px */
-    @media (min-width: 64em) {
-        padding-left: 12.8rem;
-        padding-right: 12.8rem;
-
-    }
- 
+  max-width: 128rem;
+  margin: auto;
+  /* Smart phone */
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  /* Ipad */
+  @media (min-width: 76.8rem) {
+    padding-left: 6.4rem;
+    padding-right: 6.4rem;
+  }
+  /* Ipad landscape and bigger  */
+  /* 64em is equal to 1024px */
+  @media (min-width: 64em) {
+    padding-left: 12.8rem;
+    padding-right: 12.8rem;
+  }
 }
 
 /*Setting the footer*/
 
+/* 1168PX */
+@media screen and (max-width: 73em) {
+  body {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/* 944PX */
+@media screen and (max-width: 59em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 768PX */
+@media screen and (max-width: 48em) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+/* 540PX */
+@media screen and (max-width: 34em) {
+  html {
+    font-size: 40%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .dropSelect {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: contents;
+  }
+
+  #mobileNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 10vh;
+    background-color: #f7f7f7;
+    box-shadow: 0 0.5rem 1rem#000;
+    position: fixed;
+    inset: 0 0 0 0;
+  }
+
+  .res-submission {
+    width: 100%;
+  }
+
+  .res-submission p {
+    font-size: 1.8rem;
+  }
+  .res-content a {
+    text-align: center;
+  }
+}

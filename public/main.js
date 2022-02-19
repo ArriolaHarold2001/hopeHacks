@@ -172,6 +172,53 @@ document.querySelector("#api-btn").addEventListener("click", (e) => {
     });
 });
 
-/* <div class="res-url">
-<a href="${resUrl}" target="_blank">...</a>
-</div> */
+document.querySelector("#api-btn").addEventListener("touchend", (e) => {
+  e.preventDefault();
+  // window.location = "/news";
+  // url = `/api/news/${country}/${category}/`;
+
+  fetch(`/api/news/${country}/${category}/`, {
+    method: "GET",
+    headers: {},
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((body) => {
+      resTitle = body.title;
+      resAuthor = body.author;
+      resDescription = body.description;
+      resSource = body.source.name;
+      resImg = body.urlToImage;
+      resContent = body.content;
+      resUrl = body.url;
+
+      let html = `
+      <section class="res-submission">
+      <div class="res-title">
+        <h2>${resTitle}</h2>
+      </div>
+      <div class="res-author">
+        <h3>${resAuthor}</h3>
+        <h3>|</h3>
+        <h3>${resSource}</h3>
+      </div>
+      <div class="res-description">
+      <h4>${resDescription}</h4>
+      </div>
+      <div class="res-img">
+        <img src="${body.urlToImage}"/>
+      </div>
+      <div class="res-content">
+        <p>${resContent}  </p>
+        <a href="${resUrl}" target="_blank">${resSource} ↗️</a>
+      </div>
+    </section>
+      `;
+
+      submission.insertAdjacentHTML("afterend", html);
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
