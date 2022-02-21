@@ -108,6 +108,7 @@ label {
   appearance: none;
   outline: none;
   border: none;
+  box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.2);
 }
 
 /* Highlights with box shawdow for inputs and creating a transition so the 
