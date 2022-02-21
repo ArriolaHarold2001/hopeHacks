@@ -97,9 +97,10 @@ function dropdownFunc(arr, section) {
 dropdownFunc(countriesArray, couDropdownSection);
 dropdownFunc(catergoryArray, catDropdownSection);
 
-let selectCategory = document.getElementById("category");
-let selectCountry = document.getElementById("country");
-let submission = document.querySelector(".res-submission");
+const selectCategory = document.getElementById("category");
+const selectCountry = document.getElementById("country");
+const submission = document.querySelector(".res-submission");
+const throwawayElement = document.querySelector(".throwaway");
 let country = "";
 let category = "";
 
@@ -165,6 +166,7 @@ document.querySelector("#api-btn").addEventListener("click", (e) => {
     </section>
       `;
 
+      throwawayElement.style.display = "none";
       submission.insertAdjacentHTML("afterend", html);
     })
     .catch((err) => {
@@ -216,6 +218,7 @@ document.querySelector("#api-btn").addEventListener("touchend", (e) => {
     </section>
       `;
 
+      throwawayElement.style.display = "none";
       submission.insertAdjacentHTML("afterend", html);
     })
     .catch((err) => {
